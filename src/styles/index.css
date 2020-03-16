@@ -1,0 +1,16 @@
+a.activeNavLink {
+    font-weight: bold;
+    font-size: 18px;
+    list-style-type: none;
+    color: #ffffff;
+}
+
+a.navLink {
+    font-size: 18px;
+    list-style-type: none;
+    color: #ffffff;
+}
+
+a, a:active, a:visited, a:hover {
+    text-decoration: none;
+}

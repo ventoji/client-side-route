@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    background-color:$off-black;
+   // justify-content: space-between;
+    align-items: center;
+    height: 12rem;
+
+    &__title{
+      // padding-top: 20px;
+        color: #ffffff;
+        font-size: 4rem;
+        display: inline-block;
+        margin-left: 8rem;
+
+    }
+
+    &__logo{
+        height: 10.25rem;
+        margin-left: 3rem;
+    }
+}
