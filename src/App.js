@@ -1,11 +1,10 @@
 import React from 'react'
 import Header from './components/layout/Header'
 // import Sidebar from './components/layout/Sidebar'
-import SidebarOpt from './components/layout/SidebarOpt';
+import SidebarOpt1 from './components/layout/SidebarOpt1';
 
-import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
-import { createBrowserHistory } from 'history';
-// BrowserRouter
+import {BrowserRouter,Route, Switch} from 'react-router-dom';
+
 import Home from './components/Home'
 //import NameForm from './components/prompt/NameForm'
 import NameFormHooks from './components/prompt/NameFormHooks'
@@ -21,20 +20,26 @@ import SmartColorSwatch from './components/color/SmartColorSwatch'
 import People from './components/people/People';
 import PersonProfileContainer from './components/containers/PersonProfileContainer';
 
-export const history = createBrowserHistory();
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+
+import {paths} from './utils/config';
 
 const App = () => {
+
     return(
-        <Router basename={`${process.env.SUBDIRECTORY}`} history={history}>
+        <BrowserRouter basename={paths().folder}> 
             <div className="container-main">
 
                 <Header />
 
-                <div class="content">
+               
+                <Container className="content-rr" fluid> 
 
-                <SidebarOpt />
+                <SidebarOpt1 />
 
-                <div className={'main'}> 
+                <Row className="main">
+
                 <Switch>
                     <Route path="/" component={Home} exact={true} />
                     <Route path="/prompt" component={NameFormHooks} />
@@ -53,10 +58,14 @@ const App = () => {
                     <Route path='/logout' component={Logout} />
                     <Route  component={PageNotFound} />
                 </Switch>
-                </div>
-                    </div>
+        
+
+                </Row>
+            
+                </Container>
+                    
             </div>
-        </Router>
+        </BrowserRouter>
     )
 }
 

@@ -9,7 +9,7 @@ class Logout extends React.Component {
 
     }
 
-    componentWillMount = () => {  // Will
+    componentDidMount = () => {  // Will
         authService.signOut(() => {});
     };
 

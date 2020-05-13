@@ -8,8 +8,12 @@ const Home = () => {
         marginLeft: 200,
         textAlign: 'center'
     }
+  //  style={imgStyle}
+
     return(
-        <img style={imgStyle} src={image2} />
+
+       
+        <img className="codefileimg"  src={image2} />
     )
 }
 

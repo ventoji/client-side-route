@@ -4,8 +4,11 @@ import PropTypes from 'prop-types';
 import * as querystring from 'query-string';
 import LetterList from './LetterList';
 import LanguageList from './LanguageList';
+import {paths} from '../../utils/config';
 
 const PersonProfile = (props) => {
+
+  // console.log(props);
 
     // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams#Browser_compatibility
     // const query = new URLSearchParams(props.location.search);
@@ -14,16 +17,18 @@ const PersonProfile = (props) => {
 
     // so we use this package instead query-string
     const qsValues = querystring.parse(props.location.search);
+    
     const name = qsValues.name;
     const occupation = qsValues.occupation;
 
+   // console.log(paths());
     return (
         <div>
             <h1>{name}</h1>
             <h3>{occupation}</h3>
 
             <div>
-            <img src={`${process.env.SUBDIRECTORY}/assets/Male_2_Circle_Orange.png`} align="right" width={'150'}/>
+            <img src={paths().srcImage} align="right" width={'150'}/>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Commodo elit at imperdiet dui accumsan sit amet nulla. Enim facilisis gravida neque
                 convallis. Mi eget mauris pharetra et ultrices neque ornare. Sagittis aliquam malesuada bibendum arcu.

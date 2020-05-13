@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Link, withRouter} from 'react-router-dom';
 
 const LetterList = (props) => {
-
+//console.log(props);
     const spanStyle = {
         marginRight: 10,
         fontWeight: 'bold',

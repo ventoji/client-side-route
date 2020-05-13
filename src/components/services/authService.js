@@ -6,17 +6,23 @@ const authService = {
 
     isAuthenticated() {
 
-        return cookies.get('auth') === 'true';
+        return cookies.get('myCat') === 'true';
     },
 
 
     signIn(cb) {
-        cookies.set('auth', true, {path: '/'});
+        cookies.set('myCat', true, {
+            path: '/',
+            sameSite: true
+        });
         setTimeout(cb, 100);
     },
 
     signOut(cb) {
-        cookies.set('auth', false, {path: '/'});
+        cookies.set('myCat', false, {
+            path: '/',
+            sameSite: true
+        });
         setTimeout(cb, 100);
     }
 };

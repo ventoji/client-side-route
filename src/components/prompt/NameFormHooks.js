@@ -1,6 +1,7 @@
 import React, {useState } from "react"
-import {Form, FormControl} from 'react-bootstrap';
-import Button from 'react-bootstrap/es/Button';
+import { Form, FormControl} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+//import {Button} from "react-bootstrap";
 import {Prompt} from 'react-router-dom';
 
 const NameFormHooks = () => {
@@ -35,7 +36,7 @@ const NameFormHooks = () => {
             message='Leaving this form will lose your data.'
             />
             <h1>Prompt for Completion</h1>
-                <Form horizontal={true} inline={true}>
+                <Form  inline={true}>
                     <FormControl
                         type="text"
                         value={firstName}

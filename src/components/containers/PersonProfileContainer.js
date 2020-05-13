@@ -1,7 +1,7 @@
 import React from 'react'
 import request from 'superagent'
 import PersonProfile from '../../components/people/PersonProfile'
-
+import {paths} from '../../utils/config';
 
 class PersonProfileContainer extends React.Component {
 
@@ -16,13 +16,12 @@ class PersonProfileContainer extends React.Component {
     componentDidMount = () => {
 
         request
-            .get(`${process.env.SUBDIRECTORY}/assets/languageData.json`)
+            .get(`${paths().folder}dist/assets/languageData.json`)
             .end((err, res) => {
                 if (err) {
                     console.log( err);
                     return;
                 }
-               // console.log(res);
 
                 const json = JSON.parse(res.text);
 
@@ -33,7 +32,6 @@ class PersonProfileContainer extends React.Component {
     };
 
     render = () => {
-
         return (
             <section>
                 <PersonProfile languages={this.state.languages}/>

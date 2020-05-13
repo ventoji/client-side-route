@@ -2,17 +2,52 @@
  // background-color:grey;
 }
 
-.content {
+.content-rr{
+
+  padding: 0;
+}
+
+.table-rr{
+  width: 80vw;
+}
+/* .content {
   display: flex;
 
     @media only screen and (max-width: $bp-medium) {
      flex-direction: column; //1rem=8px, 8px/16px = 0.5*100
   }
-}
+} */
 
+.form-people-rr input,
+.form-people-rr button{
+  height: 3rem;
+  width: 20%;
+}
 
 .main {
   //background-color: paleturquoise;
-  flex: 1;
+ // flex: 1;
   padding: 12rem;
+}
+
+.codefileimg{
+
+  margin-top: 50px;
+  width: 400px;
+  margin-left: 200px;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 200px;
+    margin-left: 0; 
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    margin-left: 0; 
+  }
+
+}
+
+.img404-rr{
+  width: 300px;
 }

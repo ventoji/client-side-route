@@ -31,7 +31,7 @@ const SidebarOpt = () => {
                 {LinksComponents}
             </ul>
 
-            <div class="legal">
+            <div className="legal">
             &copy; <a href="https://github.com/search?p=1&q=David+Starr&type=Repositories"> David Starr </a>
         </div>
 

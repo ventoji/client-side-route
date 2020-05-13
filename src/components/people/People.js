@@ -2,6 +2,7 @@ import React from 'react';
 import {Button, Table} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import PersonAPI from '../services/personService';
+import {Row, Col, Container} from 'react-bootstrap';
 
 let api = new PersonAPI();
 
@@ -25,6 +26,8 @@ class People extends React.Component {
 
     render = () => {
 
+       
+
         let people = this.state.people.map((person, index) => {
 
             const linkUrl = `${this.props.match.url}/${person.id}?name=${person.name}&occupation=${person.occupation}`;
@@ -46,7 +49,8 @@ class People extends React.Component {
         return (
             <div>
                 <h1>People</h1>
-                <Table bordered={false} responsive={true} striped={true}>
+                <Table className="table-rr" striped bordered hover variant="dark" responsive="sm">
+               
                     <thead>
                     <tr>
                         <td><strong>ID</strong></td>
@@ -59,14 +63,18 @@ class People extends React.Component {
                     {people}
                     </tbody>
                 </Table>
-                <div>
+                <Container fluid>
+                <Row>
+                <Col className="form-people-rr">
                     <input onChange={this.onNameChange} placeholder={'Name'} value={this.state.newName}/>
                     {' '}
                     <input onChange={this.onOccupationChange} placeholder={'Occupation'}
                            value={this.state.newOccupation}/>
                     {' '}
                     <Button onClick={this.onAddNewPerson}>Add</Button>
-                </div>
+                </Col>
+                </Row>
+                </Container>
             </div>
         );
     };

@@ -1,6 +1,6 @@
 import React from 'react';
 import authService from "../services/authService";
-import {Button, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
+import {Button, FormLabel, Form, FormControl, FormGroup} from "react-bootstrap";
 import {Redirect} from "react-router-dom";
 
 class Login extends React.Component {
@@ -25,28 +25,28 @@ class Login extends React.Component {
             <div style={{width: 200}}>
                 <h1>Sign In</h1>
 
-                <Form horizontal={true}>
+                <Form >
                     <FormGroup>
 
-                        <ControlLabel>Email Address</ControlLabel>
+                        <FormLabel>Email Address</FormLabel>
                         <FormControl
                             type="string"
                             placeholder="Email"
                             size={{length: 40}}
-                            disabled={true}
+                            
                             onChange={this.onHandleLastNameChange}
                         />
 
-                        <ControlLabel>Password</ControlLabel>
+                        <FormLabel>Password</FormLabel>
                         <FormControl
                             type="password"
                             placeholder="Password"
                             length={'40px'}
-                            disabled={true}
+                            
                             onChange={this.onHandleLastNameChange}
                         />
 
-                        <Button className='btn btn-primary' onClick={this.login} disabled={true}>Sign in</Button>
+                        <Button className='btn btn-primary' onClick={this.login} >Sign in</Button>
                     </FormGroup>
                 </Form>
             </div>

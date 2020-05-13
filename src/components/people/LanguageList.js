@@ -12,11 +12,19 @@ class LanguageList extends React.Component {
         };
     }
 
-    componentWillReceiveProps = (nextProps) => {
+   /* componentDidUpdate = (nextProps) => {
+
         this.setState({
             letter: nextProps.match.params.letter
         });
-    };
+    }*/
+
+    
+    UNSAFE_componentWillReceiveProps = (nextProps) => {
+        this.setState({
+            letter: nextProps.match.params.letter
+        });
+    }; 
 
     render = () => {
 
