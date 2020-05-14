@@ -13,9 +13,9 @@ module.exports = (env) => {
     let publicPathSite;
     if(isProduction){
         env1 = dotenv.config({path:'.env'}).parsed;
-        publicPathSite = process.env.PUBLIC_URL + process.env.SUBDIRECTORY + '/dist/';
-        src = process.env.PUBLIC_URL + process.env.SUBDIRECTORY +'/dist/bundle.js';
-        srcStyle1 =  process.env.PUBLIC_URL + process.env.SUBDIRECTORY + '/dist/styles.css';
+        publicPathSite = process.env.PUBLIC_URL + process.env.SUBDIRECTORY + 'dist/';
+        src = process.env.PUBLIC_URL + process.env.SUBDIRECTORY +'dist/bundle.js';
+        srcStyle1 =  process.env.PUBLIC_URL + process.env.SUBDIRECTORY + 'dist/styles.css';
     }else{
         env1 = dotenv.config({path:'.env.development'}).parsed;
         publicPathSite = process.env.LOCALSERVER ==='f' ? process.env.PUBLIC_URL + 'dist/' : process.env.PUBLIC_URL_LOCALSERVER + '/dist/';
@@ -33,7 +33,7 @@ module.exports = (env) => {
 
     return {
         mode: process.env.NODE_ENV || 'development',
-        entry: ['babel-polyfill','./src/index.js'],
+        entry: './src/index.js',
         output :{
             path: path.join(__dirname,'public', 'dist'),
             filename: 'bundle.js'

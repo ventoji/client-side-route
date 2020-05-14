@@ -13,7 +13,7 @@ const PageNotFound = () => {
             <Col>
                 <h1> Page Not Found</h1>
                 <div style={style404}> 404</div>
-                <img class="img404-rr" src={image1} />
+                <img className="img404-rr" src={image1} />
             </Col>
         </Row>
         </Container>

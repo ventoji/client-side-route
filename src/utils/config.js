@@ -13,7 +13,7 @@ export const paths = () => {
         srcImage = `${publicPath}/dist/assets/Male_2_Circle_Orange.png`;
     }else{
         folder = `${process.env.SUBDIRECTORY}`;
-        srcImage = `${process.env.SUBDIRECTORY}/dist/assets/dist/Male_2_Circle_Orange.png`;
+        srcImage = `${process.env.SUBDIRECTORY}/dist/assets/Male_2_Circle_Orange.png`;
         publicPath = publicPathUrl;
     }
 

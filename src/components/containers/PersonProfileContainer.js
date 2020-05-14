@@ -14,7 +14,7 @@ class PersonProfileContainer extends React.Component {
     }
 
     componentDidMount = () => {
-
+//console.log(`${paths().folder}dist/assets/languageData.json`);
         request
             .get(`${paths().folder}dist/assets/languageData.json`)
             .end((err, res) => {
