@@ -48,6 +48,6 @@ Before building for production you have to define .env variables: PUBLIC_URL and
 
 The applicacion can be viewed on [clicking here](http://www.ventoji.es/demos-react/client-side-route/) using apache server. If you want to use this app you have to take care of .env file modifying it as you need to.
 
-## Why this app can be useful?
+## Why can this app be useful?
 
 You can easily adapt this app to build your own using react router (BrowserRouter, withRouter), in App.js you can see how to create different types of routes. Webpack is configured to use SASS, LESS preprocesor to define your own styles or you can use react-bootstrap, bootstrap libraries to build your components and give style to the layout. It can be a starting point for react beginners.    
